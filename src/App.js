@@ -7,10 +7,10 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <header className="App-header">
-        <ul>
-          <li><NavLink>Home</NavLink></li>
-          <li><NavLink>Deposit</NavLink></li>
-          <li><NavLink>Withdraw</NavLink></li>
+        <ul className="ul-style">
+          <li className="li-style"><NavLink className="App-link" to="/">Home</NavLink></li>
+          <li className="li-style"><NavLink className="App-link" to="/deposit">Deposit</NavLink></li>
+          <li className="li-style"><NavLink className="App-link" to="/withdraw">Withdraw</NavLink></li>
         </ul>
 
           <Route path="/" />
