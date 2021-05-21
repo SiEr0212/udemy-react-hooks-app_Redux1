@@ -1,5 +1,16 @@
-import React from 'react';
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function WithdrawPage() {
-    return <h1>WithdrawPage</h1>
+  const balance = useSelector((state) => state.balance);
+  const dispatch = useDispatch();
+  const onWithrawHandle = () => {
+    dispatch({ type: "WITHDRAW", payload: 10 });
+  };
+  return (
+    <div>
+      <h1> Balance: {balance} </h1>
+      <button onClick={onWithrawHandle}>Withraw</button>
+    </div>
+  );
 }
