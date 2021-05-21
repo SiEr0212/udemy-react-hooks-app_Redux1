@@ -1,5 +1,16 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function DepositPage() {
-  return <h1>DepositPage</h1>
+  const balance = useSelector((state) => state.balance);
+  const dispatch = useDispatch();
+  const onDepositHandle = () => {
+    dispatch({ type: "DEPOSIT", payload: 10 });
+  };
+  return (
+    <div>
+      <h1> Balance: {balance} </h1>
+      <button onClick={onDepositHandle}>Deposit</button>
+    </div>
+  );
 }
