@@ -19,7 +19,7 @@ export default function HomePage() {
         disabled={loan ? true : false}
         onClick={applyLoanHandle}
       >
-        Apply for loan
+        {loan ? "Loan Applied" : "Apply for loan"}
       </button>
     </div>
   );
