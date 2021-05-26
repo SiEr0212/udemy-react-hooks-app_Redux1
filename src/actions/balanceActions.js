@@ -11,6 +11,7 @@ export function deposit() {
 
 export function depositAsync (){
   return (dispatch) => {
+    dispatch(loading);
     setTimeout(() => {
       dispatch(deposit());
     }, 5000);
