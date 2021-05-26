@@ -12,10 +12,7 @@ export default function DepositPage() {
   };
   return (
     <div>
-    {
-      loading ? <h1>loading...</h1> : <h1> Balance: {balance} </h1>
-    }
-    <h1> Balance: {balance} </h1>
+      {loading ? <h1>saving.....</h1> : <h1> Balance: {balance} </h1>}
       <button onClick={onDepositHandle}>Deposit</button>
       <h1>{loan ? "Loan Applied" : "Loan Needed"}</h1>
     </div>
