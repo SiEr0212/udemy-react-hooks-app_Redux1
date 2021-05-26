@@ -5,7 +5,7 @@ import * as balanceActions from "./../actions/balanceActions";
 export default function DepositPage() {
   const balance = useSelector((state) => state.balanceReducer.balance);
   const loan = useSelector((state) => state.loanReducer.loan);
-  const loading = useSelector((state) => state.balanceReducer.balance);
+  const loading = useSelector((state) => state.balanceReducer.loading);
   const dispatch = useDispatch();
   const onDepositHandle = () => {
     dispatch(balanceActions.depositAsync());
