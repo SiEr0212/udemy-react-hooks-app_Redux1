@@ -1,8 +1,8 @@
-export const deposit = () => {
+export function deposit() {
   return { type: "DEPOSIT", payload: 10 };
 };
 
-export const depositAsync = () => {
+export function depositAsync (){
   return (dispatch) => {
     setTimeout(() => {
       dispatch(deposit());

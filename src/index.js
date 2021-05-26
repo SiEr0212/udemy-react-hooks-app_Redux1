@@ -14,7 +14,7 @@ const store = createStore(
     balanceReducer,
     loanReducer,
   }),
-  applyMiddleware()
+  applyMiddleware(thunk)
 );
 
 ReactDOM.render(
